@@ -1,0 +1,47 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 462
+  ClientWidth = 831
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object Login: TLabel
+    Position.X = 32.000000000000000000
+    Position.Y = 40.000000000000000000
+    Size.Width = 217.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Login'
+    TabOrder = 0
+  end
+  object LoginBox: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    StyleLookup = 'LoginBoxStyle1'
+    TabOrder = 1
+    Position.X = 472.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object LoginButton: TButton
+    Position.X = 728.000000000000000000
+    Position.Y = 80.000000000000000000
+    TabOrder = 2
+    Text = 'LoginButton'
+    OnClick = LoginButtonClick
+  end
+  object CheckBox1: TCheckBox
+    Position.X = 64.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 217.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Do this'
+  end
+end

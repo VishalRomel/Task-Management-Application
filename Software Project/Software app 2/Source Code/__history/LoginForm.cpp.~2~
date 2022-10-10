@@ -1,0 +1,29 @@
+//---------------------------------------------------------------------------
+
+#include <fmx.h>
+#pragma hdrstop
+#include <fstream>
+#include <string>
+#include "LoginForm.h"
+#include <iostream>
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.fmx"
+
+using namespace std;
+
+TForm3 *Form3;
+//---------------------------------------------------------------------------
+__fastcall TForm3::TForm3(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm3::LoginButtonClick(TObject *Sender)
+{
+	   String x = LoginBox->Text;
+
+	   if( x=="Vishal")MainForm->Show();
+}
+//---------------------------------------------------------------------------
+

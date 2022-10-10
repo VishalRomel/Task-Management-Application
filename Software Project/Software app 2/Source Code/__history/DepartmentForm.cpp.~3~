@@ -1,0 +1,40 @@
+//---------------------------------------------------------------------------
+
+#include <fmx.h>
+#pragma hdrstop
+#include <fstream>
+#include <String>
+#include <iostream>
+#include <ostream>
+
+
+#include "DepartmentForm.h"
+#include "MainForm.h"
+#include "LoginForm.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.fmx"
+
+ using namespace std;
+TDepartment *Department;
+//---------------------------------------------------------------------------
+__fastcall TDepartment::TDepartment(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TDepartment::AssignButtonClick(TObject *Sender)
+{
+	 /* fstream assign;
+	  assign.open("AssignTask.txt",ios::app);
+
+	  if(assign.is_open()){
+		 AnsiString Task= assignBox->Text();
+		 assign<<Task<<"\n";
+		 assign.Close();
+	   }
+	  //Form1->CheckBox1->Text= "Change";
+	  //Form1->Show();   */
+}
+//---------------------------------------------------------------------------
+

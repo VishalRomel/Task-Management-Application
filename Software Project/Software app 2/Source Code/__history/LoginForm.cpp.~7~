@@ -1,0 +1,61 @@
+//---------------------------------------------------------------------------
+
+#include <fmx.h>
+#pragma hdrstop
+#include <fstream>
+#include <string>
+#include "LoginForm.h"
+#include <iostream>
+#include <MainForm.h>
+
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.fmx"
+
+using namespace std;
+
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+
+//get lines from database and return it to its checkbox
+String TaskLine(string a, int b){
+
+		fstream Task;
+		Task.open ("AssignTask.txt",ios::in);
+
+		if(Task.is_open()){
+		  for(int i=0; i<b; i++){
+			 getline(Task,a);
+			// if(a=="")i--;
+			 if(i==b)break;
+		   }
+		 }
+
+	return a.c_str();
+}
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+		   string line;
+		   this->CheckBox1->Text = TaskLine(line,1);
+		   this->CheckBox2->Text = TaskLine(line,2);
+		   this->CheckBox3->Text = TaskLine(line,3);
+		   this->CheckBox4->Text = TaskLine(line,4);
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::LoginButtonClick(TObject *Sender)
+{
+
+
+	 //  if( x=="Vishal")Form2->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
+{
+  Form2->Close();
+}
+//---------------------------------------------------------------------------
+
+

@@ -1,0 +1,20 @@
+//---------------------------------------------------------------------------
+
+#ifndef DepartmentFormH
+#define DepartmentFormH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <FMX.Controls.hpp>
+#include <FMX.Forms.hpp>
+//---------------------------------------------------------------------------
+class TDepartment : public TForm
+{
+__published:	// IDE-managed Components
+private:	// User declarations
+public:		// User declarations
+	__fastcall TDepartment(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TDepartment *Department;
+//---------------------------------------------------------------------------
+#endif
